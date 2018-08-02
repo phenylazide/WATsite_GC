@@ -1,0 +1,13 @@
+$Input_Files:
+OUTPUT/waterindex.wtndx							|waterindex file
+OUTPUT/wateroccupancy.grd						|wateroccupancy grid file
+OUTPUT/3x3/entropy.egy							|entropy value file
+ENTHALPY_OUTPUT								|enthalpy files' folder
+
+$Input_Parameters:
+70															|cutoff for number of clusters (top clusters ranked by hydroscore)
+-18.18															|enthalpy in bulk solvent
+-18.5															|cutoff for enthalpy
+5.03															|cutoff for entropy		
+-0.5															|enthalpy reward
+-0.5															|entropy reward

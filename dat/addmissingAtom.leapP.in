@@ -1,0 +1,5 @@
+source leaprc.gaff
+source leaprc.ff03
+prot = loadpdb prot.pdb
+savepdb prot prot_amber.pdb
+quit

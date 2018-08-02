@@ -1,0 +1,38 @@
+define =
+integrator = md
+dt         = 0.002   ; ps
+nsteps     = 500000
+comm-grps  = protein_lig
+comm-mode  = angular
+energygrps = 
+;
+nstxout = 0
+nstvout = 0
+nstfout = 0
+nstlog  = 5000
+nstenergy = 1000
+nstxout-compressed = 1000
+compressed-x-grps  = system
+;
+pbc = xyz
+cutoff-scheme = Verlet
+coulombtype   = PME
+rcoulomb      = 1.0
+vdwtype       = cut-off
+rvdw          = 1.0
+DispCorr      = EnerPres
+;
+Tcoupl  = V-rescale
+tau_t   = 0.2 0.2
+tc_grps = protein_lig envir
+ref_t   = 298.15 298.15
+;
+Pcoupl     = parrinello-rahman
+pcoupltype = isotropic
+tau_p = 2.0
+ref_p = 1.0
+compressibility = 4.5e-5
+;
+freezegrps  = 
+freezedim   = 
+constraints = hbonds

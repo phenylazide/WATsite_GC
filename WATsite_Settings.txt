@@ -1,0 +1,11 @@
+USER:
+username                           yang570
+
+CLIENT:
+WATsite_home                       /home/yang570/WATsite2.0/
+amber_home                         /usr/local/amber14
+gromacs_home                       /usr/local/gromacs
+pymol_exe_dir                      /usr/local/pymol
+reduce_exe_dir                     /home/yang570/WATsite2.0/bin
+ncpus                              8
+

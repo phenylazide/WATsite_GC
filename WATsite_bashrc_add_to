@@ -1,0 +1,4 @@
+## watsite
+
+alias _watsite1="source activate python27 && python /home/phzd/g09E/WATsite_GC/watsite_GC1.py" 
+alias _watsite2="bash /home/phzd/g09E/WATsite_GC/watsite_GC2.sh"

@@ -1,0 +1,20 @@
+"command" change to "gmx command"
+
+mdp file:  
+	rvdw                = 1.0; from 1.4
+	cutoff-scheme      = Verlet; from group
+	
+envirements:
+
+	ligand.mol2
+	protein.pdb
+	
+	prot.top to protein.top in 
+	
+	
+in  estimate_enthalpy.py: 
+
+	rvdw                = 1.0
+	cutoff-scheme      = Verlet
+	
+	prot.top to protein.top 

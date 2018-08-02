@@ -1,0 +1,37 @@
+$Input_Ligand:
+lig.pdb										|input ligand pdb
+
+
+$Input_MDsnapshots:
+../mdsnaps.pdb								|pdb snapshots prot_pr_sm_NMR.pdb		
+4000										|number of frames in the snapshot files	
+0											|water model (1: TIP4P; 0: SPC)
+../../index.ndx								|input index file
+
+
+$Grid_Parameters:
+1.0											|size of water (SD)
+0.25										|griddelta: distance between two adjacent grid points
+3											|Farest Distance
+0.052										|Water density for grid cutoff
+
+
+$Cov_parameters:
+9											|covariance dimension (=3: two 3x3 matrix; =6: one 6x6 dimension; =9: both 3x3 and 6x6 method)
+
+$Cluster_method:
+1											|mothod of clustering in hydration site identification (=1: DBSCAN; =2: QT clustering)
+
+$Entropy:
+70											|number of bins used to construct Probability Distribution function
+-3.902										|entropy of neat water molecules
+
+$DBSCAN:
+300											|min of points define neighbor in DBSCAN (start number)
+50											|min of points define neighbor in DBSCAN (end number)
+
+$Hydro_Cluster:
+10											|maximum clusters
+2.50										|cluster_mean_dist
+2.75										|maxdist
+10.0										|distance cutoff for QT clustering

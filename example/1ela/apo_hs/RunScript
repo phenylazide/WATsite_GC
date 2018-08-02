@@ -1,0 +1,13 @@
+#!/bin/tcsh
+#
+setenv WATSITEHOME /home/yang570/WATsite2.0/
+setenv AMBERHOME /usr/local/amber14
+setenv GROMACS_HOME /usr/local/gromacs
+setenv PYMOL_EXE /usr/local/pymol/pymol
+setenv reduce_exe_dir /home/yang570/WATsite2.0/bin
+setenv ncpus 8
+setenv watermodel spc
+setenv withligand 0
+setenv ligcharge 0
+$WATSITEHOME/bin/WATsite.sh >& watsite.log
+

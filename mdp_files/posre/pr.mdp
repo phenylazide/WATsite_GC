@@ -1,0 +1,65 @@
+;
+; position restraint
+;
+;
+;
+title		    =  position_restraint
+constraints         =  hbonds
+lincs_order         =  8
+lincs_iter          =  5
+lincs_warnangle     =  40
+integrator          =  md
+dt		    =  0.002
+nsteps              =  25000 ; original 125000 equal 250 ps, too much
+;
+; Center-of-mass specifications
+;
+comm_mode           = Linear
+comm_grps	    = protein non-protein
+nstcomm		    = 1
+;
+; Output specifications
+;
+nstxout             = 1000
+nstvout             = 1000
+nstfout             = 0
+nstlog              = 500
+nstenergy           = 500
+nstlist 	    = 10
+energygrps          = protein sol
+;
+; Force field specifications
+;
+;nstlist             = 10
+cutoff-scheme       = Verlet ;from group to Verlet
+ns_type             = grid
+rlist               = 1.0
+coulombtype         = PME
+rcoulomb            = 1.0
+rvdw                = 1.0 ; from 1.4 t0 1.0
+vdwtype             = Cut-off
+fourierspacing      = 0.12
+fourier_nx          = 0
+fourier_ny          = 0
+fourier_nz          = 0
+pme_order           = 4
+ewald_rtol          = 1e-5
+optimize_fft        = yes
+;
+; Berendsen temperature coupling is on in four groups
+Tcoupl 		    = nose-hoover
+tau_t 		    = 0.1 	  0.1
+tc_grps 	    = protein non-protein
+ref_t 		    = 300 	  300
+;
+; Pressure coupling is on
+Pcoupl 		    = Parrinello-Rahman
+pcoupltype 	    = isotropic
+tau_p 		    = 1.0
+compressibility     = 4.5e-5
+ref_p 		    = 1.0
+;
+; Generate velocites is on at 300 K.
+gen_vel             = yes
+gen_temp            = 300.0
+gen_seed            = 123456
