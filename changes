@@ -18,3 +18,8 @@ in  estimate_enthalpy.py:
 	cutoff-scheme      = Verlet
 	
 	prot.top to protein.top 
+	
+	
+	
+cd /home/phzd/g09E/WATsite_GC/test_watsite/3HTB_5yy/Enthalpy_output_0000
+$GROMACS_HOME/bin/gmx grompp -f /home/phzd/g09E/WATsite_GC/test_watsite/3HTB_5yy/Enthalpy_output_0000/pr_0.mdp -c /home/phzd/g09E/WATsite_GC/test_watsite/3HTB_5yy/prot_md.gro -p /home/phzd/g09E/WATsite_GC/test_watsite/3HTB_5yy/protein.top -o test.tpr -maxwarn 50 -n /home/phzd/g09E/WATsite_GC/test_watsite/3HTB_5yy/Enthalpy_output_0000/wtrindex_0000.ndx  -quiet

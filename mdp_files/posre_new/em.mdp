@@ -3,12 +3,10 @@
 ;
 ;
 ;
-title               = energy_minimization
-cpp                 = /usr/bin/cpp
 define              = -DFLEXIBLE
 constraints         = none
 integrator          = steep
-nsteps              = 5000
+nsteps              = 1000
 ;
 ; Output specifications
 ;
@@ -19,13 +17,13 @@ energygrps          = protein sol
 ;
 ; Force field specifications
 ;
-cutoff-scheme       = group
+cutoff-scheme       = Verlet ; from group to Verlet
 nstlist             = 10
 ns_type             = grid
 rlist               = 1.0
 coulombtype         = PME
 rcoulomb            = 1.0
-rvdw                = 1.4
+rvdw                = 1.0 ; from 1.4 to 1.0
 vdwtype             = Cut-off
 fourierspacing      = 0.12
 fourier_nx          = 0

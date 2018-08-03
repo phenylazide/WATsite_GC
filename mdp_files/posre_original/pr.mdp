@@ -1,9 +1,9 @@
 ;
-; equilibration
+; position restraint
 ;
 ;
 ;
-title		    =  equilibration
+title		    =  position_restraint
 cpp                 =  /usr/bin/cpp
 define              =  -DPOSRES
 constraints         =  hbonds
@@ -12,26 +12,27 @@ lincs_iter          =  5
 lincs_warnangle     =  40
 integrator          =  md
 dt		    =  0.002
-nsteps              =  50000 ; original is : 500000
+nsteps              =  125000
 ;
 ; Center-of-mass specifications
 ;
-comm_mode   	    = Linear
+comm_mode           = Linear
 comm_grps	    = protein non-protein
 nstcomm		    = 1
 ;
 ; Output specifications
 ;
 nstxout             = 1000
-nstvout             = 5000
+nstvout             = 1000
 nstfout             = 0
 nstlog              = 500
 nstenergy           = 500
-energygrps          = protein sol 
+nstlist 	    = 10
+energygrps          = protein sol
 ;
 ; Force field specifications
 ;
-nstlist             = 10
+;nstlist             = 10
 cutoff-scheme       = group
 ns_type             = grid
 rlist               = 1.0

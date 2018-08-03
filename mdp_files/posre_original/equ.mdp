@@ -12,7 +12,7 @@ lincs_iter          =  5
 lincs_warnangle     =  40
 integrator          =  md
 dt		    =  0.002
-nsteps              =  50000 ; original is : 500000
+nsteps              =  500000
 ;
 ; Center-of-mass specifications
 ;

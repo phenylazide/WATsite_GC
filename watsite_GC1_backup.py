@@ -7,6 +7,7 @@ myprotein = 'MyProtein.pdb'
 estimate_enthalpy = 1
 
 WATSITEHOME = '/home/phzd/g09E/WATsite_GC'
+GROMACS_HOME= '/opt/gmx2016.4'  #'/opt/gmx5.12'
 AMBERHOME = '/home/phzd/test/amber16'
 PYMOL_EXE = '/home/phzd/soft/pymol/pymol'
 reduce_exe_dir = '/home/phzd/test/amber16/bin/to_be_dispatched'
@@ -14,6 +15,9 @@ ncpus = 3
 watermodel = 'spc'
 withligand = 1
 ligcharge = 1
+
+base = os.getcwd()
+os.chdir(base)
 
 #bashline = "python /home/phzd/g09E/WATsite_GC/bin/run_reduce.py -r {reduce_exe_dir} -p {myprotein}".format(reduce_exe_dir=reduce_exe_dir,myprotein=myprotein)
 #bashline1_0 = "/opt/gmx2016.4/bin/gmx pdb2gmx -ff amber99sb-ildn -f protein.pdb -o proteinH.pdb -p protein.top -ignh -water {watermodel}".format(watermodel=watermodel)

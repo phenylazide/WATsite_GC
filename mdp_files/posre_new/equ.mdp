@@ -12,7 +12,7 @@ lincs_iter          =  5
 lincs_warnangle     =  40
 integrator          =  md
 dt		    =  0.002
-nsteps              =  50000 ; original is : 500000
+nsteps              =  25000 ; original 500000 equ 1 ns
 ;
 ; Center-of-mass specifications
 ;
@@ -32,12 +32,12 @@ energygrps          = protein sol
 ; Force field specifications
 ;
 nstlist             = 10
-cutoff-scheme       = group
+cutoff-scheme       = Verlet ;from group to Verlet
 ns_type             = grid
 rlist               = 1.0
 coulombtype         = PME
 rcoulomb            = 1.0
-rvdw                = 1.4
+rvdw                = 1.0 ; from 1.4 t0 1.0
 vdwtype             = Cut-off
 fourierspacing      = 0.12
 fourier_nx          = 0

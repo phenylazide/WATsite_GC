@@ -3,7 +3,7 @@
 ;
 ;
 ;
-title		    =  equilibration
+title		    =  production
 cpp                 =  /usr/bin/cpp
 define              =  -DPOSRES
 constraints         =  hbonds
@@ -12,7 +12,7 @@ lincs_iter          =  5
 lincs_warnangle     =  40
 integrator          =  md
 dt		    =  0.002
-nsteps              =  50000 ; original is : 500000
+nsteps		    =  2000000
 ;
 ; Center-of-mass specifications
 ;
@@ -22,17 +22,17 @@ nstcomm		    = 1
 ;
 ; Output specifications
 ;
-nstxout             = 1000
+nstxout             = 500
 nstvout             = 5000
 nstfout             = 0
-nstlog              = 500
-nstenergy           = 500
+nstlog              = 1000
+nstenergy           = 1000
 energygrps          = protein sol 
 ;
 ; Force field specifications
 ;
-nstlist             = 10
 cutoff-scheme       = group
+nstlist             = 10
 ns_type             = grid
 rlist               = 1.0
 coulombtype         = PME

@@ -4,13 +4,15 @@
 ;
 ;
 title		    =  position_restraint
+cpp                 =  /usr/bin/cpp
+define              =  -DPOSRES
 constraints         =  hbonds
 lincs_order         =  8
 lincs_iter          =  5
 lincs_warnangle     =  40
 integrator          =  md
 dt		    =  0.002
-nsteps              =  25000 ; original 125000 equal 250 ps, too much
+nsteps              =  25000; original is: 125000
 ;
 ; Center-of-mass specifications
 ;
@@ -31,12 +33,12 @@ energygrps          = protein sol
 ; Force field specifications
 ;
 ;nstlist             = 10
-cutoff-scheme       = Verlet ;from group to Verlet
+cutoff-scheme       = group
 ns_type             = grid
 rlist               = 1.0
 coulombtype         = PME
 rcoulomb            = 1.0
-rvdw                = 1.0 ; from 1.4 t0 1.0
+rvdw                = 1.4
 vdwtype             = Cut-off
 fourierspacing      = 0.12
 fourier_nx          = 0
